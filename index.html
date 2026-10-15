@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones AlexTremo | Menús Digitales & QR para Restaurantes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0B0612',       // Morado noche ultra oscuro
+                            surface: '#150B24',  // Morado profundo para tarjetas
+                            card: '#1F1035',     // Morado medio
+                            border: '#321854',   // Borde violeta
+                            neon: '#00FF66',     // Verde fosforescente
+                            neonHover: '#00CC52',
+                            purpleAccent: '#9D4EDD'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0612;
+            color: #F3F0F8;
+        }
+
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+
+        /* Neon Glow Effects */
+        .neon-shadow {
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.2);
+        }
+
+
+        .neon-shadow-lg {
+            box-shadow: 0 0 40px rgba(0, 255, 102, 0.35);
+        }
+
+
+        .purple-glow {
+            box-shadow: 0 0 30px rgba(157, 78, 221, 0.25);
+        }
+
+
+        .neon-text-glow {
+            text-shadow: 0 0 12px rgba(0, 255, 102, 0.6);
+        }
+
+
+        .border-gradient {
+            border-image: linear-gradient(to right, #00FF66, #9D4EDD) 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-neon selection:text-brand-bg">
+
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-brand-bg/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-brand-neon flex items-center justify-center text-brand-bg font-black text-lg shadow-[0_0_15px_#00FF66]">AT</span>
+                <span class="font-display font-bold text-xl tracking-tight text-white">Alex<span class="text-brand-neon">Tremo</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-300">
+                <a href="#paquetes" class="hover:text-brand-neon transition">Paquetes</a>
+                <a href="#garantia" class="hover:text-brand-neon transition">Garantía</a>
+                <a href="#actualizaciones" class="hover:text-brand-neon transition">Actualizaciones</a>
+            </nav>
+
+
+            <a id="nav-wa-btn" href="#" target="_blank" class="bg-brand-neon hover:bg-brand-neonHover text-brand-bg font-extrabold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full transition-all duration-300 neon-shadow flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Contacto Directo</span>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 overflow-hidden border-b border-brand-border">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purpleAccent/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-brand-neon/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-brand-neon/30 text-brand-neon text-xs font-semibold mb-6 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+                Menús Digitales de Carga Ultra Rápida
+            </div>
+
+
+            <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+                Transforma el menú de tu restaurante en una <span class="text-brand-neon neon-text-glow">experiencia digital fluida</span>.
+            </h1>
+
+
+            <p class="mt-6 text-stone-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Sin rentas mensuales. Un solo pago para tener tu menú interactivo cargando al instante con Código QR. Profesional, confiable y 100% optimizado para celulares.
+            </p>
+
+
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#paquetes" class="w-full sm:w-auto bg-brand-neon hover:bg-brand-neonHover text-brand-bg font-extrabold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition duration-300 neon-shadow-lg flex items-center justify-center gap-2">
+                    <span>Ver Paquetes y Precios</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <a href="#actualizaciones" class="w-full sm:w-auto bg-brand-surface hover:bg-brand-card text-white border border-brand-border font-semibold text-sm px-6 py-4 rounded-xl transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-arrows-rotate text-brand-neon"></i>
+                    <span>¿Ya eres cliente? Actualizar</span>
+                </a>
+            </div>
+
+
+            <!-- Highlights Badges -->
+            <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                <div class="p-4 rounded-xl bg-brand-surface/60 border border-brand-border">
+                    <i class="fa-solid fa-bolt text-brand-neon text-xl mb-2"></i>
+                    <h2 class="text-sm font-bold text-white">Listo en 24h</h2>
+                    <p class="text-xs text-stone-400 mt-1">Implementación express sin demoras.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-surface/60 border border-brand-border">
+                    <i class="fa-solid fa-ban text-brand-neon text-xl mb-2"></i>
+                    <h2 class="text-sm font-bold text-white">Sin Suscripciones</h2>
+                    <p class="text-xs text-stone-400 mt-1">Pago único, activo para siempre.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-surface/60 border border-brand-border">
+                    <i class="fa-brands fa-whatsapp text-brand-neon text-xl mb-2"></i>
+                    <h2 class="text-sm font-bold text-white">Pedidos WhatsApp</h2>
+                    <p class="text-xs text-stone-400 mt-1">Conexión directa con la mesa.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-surface/60 border border-brand-border">
+                    <i class="fa-solid fa-shield-halved text-brand-neon text-xl mb-2"></i>
+                    <h2 class="text-sm font-bold text-white">Garantía 75%</h2>
+                    <p class="text-xs text-stone-400 mt-1">Reembolso garantizado por 7 días.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Matrix -->
+    <section id="paquetes" class="py-20 px-4 max-w-6xl mx-auto w-full">
+        <div class="text-center mb-14">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">Soluciones a la Medida de tu Local</h2>
+            <p class="text-stone-400 text-sm mt-2">Elige el paquete que mejor se adapte a tus necesidades. Sin costos ocultos.</p>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- Paquete 1: Básico -->
+            <div class="bg-brand-surface rounded-2xl p-6 border border-brand-border flex flex-col justify-between hover:border-stone-500 transition duration-300">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-stone-400">Opción Esencial</span>
+                    <h3 class="font-display text-2xl font-bold text-white mt-1">Menú Básico</h3>
+                    <p class="text-xs text-stone-400 mt-2">Perfecto para negocios que desean probar la tecnología sin complicaciones.</p>
+
+
+                    <div class="my-6">
+                        <span class="font-display text-4xl font-bold text-white">$499</span>
+                        <span class="text-xs text-stone-400">MXN / Pago único</span>
+                    </div>
+
+
+                    <ul class="space-y-3 text-xs text-stone-300 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Menú digital estático responsivo</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Alojamiento permanente en internet</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Código QR Digital en alta resolución</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-stone-500 line-through">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span>Filtros por categoría y buscador</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-stone-500 line-through">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span>Botón de pedido a WhatsApp</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button onclick="orderPackage('Menú Básico', 499)" class="w-full bg-brand-card hover:bg-stone-800 text-white font-bold py-3 px-4 rounded-xl border border-brand-border transition text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-brand-neon text-sm"></i>
+                    <span>Contratar Básico</span>
+                </button>
+            </div>
+
+
+            <!-- Paquete 2: Pro Interactivo (RECOMENDADO) -->
+            <div class="bg-brand-card rounded-2xl p-6 border-2 border-brand-neon flex flex-col justify-between relative neon-shadow transform md:-translate-y-2">
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-neon text-brand-bg text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                    El Más Vendido ★
+                </div>
+
+
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-neon">Experiencia Interactiva</span>
+                    <h3 class="font-display text-2xl font-bold text-white mt-1">Interactivo Pro</h3>
+                    <p class="text-xs text-stone-300 mt-2">Ofrece una experiencia estilo app nativa a tus clientes en sus celulares.</p>
+
+
+                    <div class="my-6">
+                        <span class="font-display text-4xl font-bold text-brand-neon neon-text-glow">$899</span>
+                        <span class="text-xs text-stone-400">MXN / Pago único</span>
+                    </div>
+
+
+                    <ul class="space-y-3 text-xs text-stone-200 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span class="font-semibold">Todo lo del paquete Básico +</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Buscador y filtro interactivo por categoría</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Carrito con envío de pedido directo a WhatsApp</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Personalización con colores de tu marca</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button onclick="orderPackage('Interactivo Pro', 899)" class="w-full bg-brand-neon hover:bg-brand-neonHover text-brand-bg font-extrabold py-3.5 px-4 rounded-xl transition text-xs uppercase tracking-wider neon-shadow flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Contratar Pro ($899)</span>
+                </button>
+            </div>
+
+
+            <!-- Paquete 3: Llave en Mano -->
+            <div class="bg-brand-surface rounded-2xl p-6 border border-brand-border flex flex-col justify-between hover:border-stone-500 transition duration-300">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-purpleAccent">Solución Física + Digital</span>
+                    <h3 class="font-display text-2xl font-bold text-white mt-1">Llave en Mano</h3>
+                    <p class="text-xs text-stone-400 mt-2">Despreocúpate de la imprenta. Recibe tu material listo para usar en mesa.</p>
+
+
+                    <div class="my-6">
+                        <span class="font-display text-4xl font-bold text-white">$1,199</span>
+                        <span class="text-xs text-stone-400">MXN / Pago único</span>
+                    </div>
+
+
+                    <ul class="space-y-3 text-xs text-stone-300 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span class="font-semibold">Todo lo del paquete Interactivo Pro +</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>5 Plantillas de QR impresas en alta resolución</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Enmicado térmico de protección para mesa</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-brand-neon"></i>
+                            <span>Entrega o envío del material físico</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button onclick="orderPackage('Llave en Mano', 1199)" class="w-full bg-brand-card hover:bg-stone-800 text-white font-bold py-3 px-4 rounded-xl border border-brand-border transition text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-brand-neon text-sm"></i>
+                    <span>Contratar Completo</span>
+                </button>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Guarantee Banner -->
+    <section id="garantia" class="py-12 px-4 bg-brand-surface border-y border-brand-border">
+        <div class="max-w-4xl mx-auto rounded-2xl p-6 sm:p-8 bg-brand-card border border-brand-neon/30 flex flex-col sm:flex-row items-center gap-6 purple-glow">
+            <div class="w-16 h-16 rounded-2xl bg-brand-neon/10 border border-brand-neon flex items-center justify-center text-brand-neon text-3xl flex-shrink-0">
+                <i class="fa-solid fa-shield-cat"></i>
+            </div>
+            <div>
+                <h3 class="font-display text-xl font-bold text-white flex items-center gap-2">
+                    Garantía de Satisfacción del 75%
+                    <span class="text-xs bg-brand-neon/20 text-brand-neon px-2.5 py-0.5 rounded-full font-sans font-semibold">7 Días de Prueba</span>
+                </h3>
+                <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Queremos que inviertas con total tranquilidad. Si dentro de los primeros 7 días de tener tu menú activo sientes que el servicio no cumple con lo esperado, te reembolsamos el <strong class="text-brand-neon">75% de tu inversión</strong> sin complicaciones. Tu confianza es nuestra prioridad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Client Update Section -->
+    <section id="actualizaciones" class="py-20 px-4 max-w-4xl mx-auto w-full">
+        <div class="text-center mb-10">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-brand-neon">Gestión para Clientes Activos</span>
+            <h2 class="font-display text-3xl font-bold text-white mt-1">¿Necesitas cambiar precios o agregar platillos?</h2>
+            <p class="text-stone-400 text-sm mt-2">Utiliza este formulario o escríbenos directamente para procesar tus modificaciones.</p>
+        </div>
+
+
+        <div class="bg-brand-surface rounded-2xl p-6 sm:p-8 border border-brand-border">
+            <form id="update-form" onsubmit="handleUpdateSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-stone-300 mb-1">Nombre del Establecimiento</label>
+                        <input type="text" id="up-establishment" required placeholder="Ej. Taquería El Paisa" class="w-full bg-brand-bg text-white text-xs rounded-xl p-3 border border-brand-border outline-none focus:border-brand-neon transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-stone-300 mb-1">Nombre de Contacto</label>
+                        <input type="text" id="up-name" required placeholder="Tu nombre" class="w-full bg-brand-bg text-white text-xs rounded-xl p-3 border border-brand-border outline-none focus:border-brand-neon transition">
+                    </div>
+                </div>
+
+
+                <div>
+                    <label class="block text-xs font-semibold text-stone-300 mb-1">Tipo de Modificación</label>
+                    <select id="up-type" class="w-full bg-brand-bg text-white text-xs rounded-xl p-3 border border-brand-border outline-none focus:border-brand-neon transition">
+                        <option value="Evento Único ($150 MXN)">Cambio puntual de precios/platillos ($150 MXN)</option>
+                        <option value="Plan Anual de Cambios">Inscripción a Plan Anual ilimitado ($1,000 MXN)</option>
+                        <option value="Consulta sobre Cambios">Tengo una duda sobre mi menú actual</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <label class="block text-xs font-semibold text-stone-300 mb-1">Detalle de los cambios a realizar</label>
+                    <textarea id="up-details" rows="3" required placeholder="Ej. Cambiar el precio del Taco Pastor de $20 a $22, y agregar una agua de horchata de 1L en $45." class="w-full bg-brand-bg text-white text-xs rounded-xl p-3 border border-brand-border outline-none focus:border-brand-neon transition"></textarea>
+                </div>
+
+
+                <button type="submit" class="w-full bg-brand-neon hover:bg-brand-neonHover text-brand-bg font-extrabold py-3.5 rounded-xl transition text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Enviar Solicitud por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-brand-surface border-t border-brand-border py-8 text-center text-xs text-stone-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-brand-neon flex items-center justify-center text-brand-bg font-black text-xs">AT</span>
+                <span class="font-display font-bold text-white">Soluciones AlexTremo</span>
+            </div>
+            <p>© 2026 Soluciones AlexTremo. Todos los derechos reservados.</p>
+            <p class="text-stone-400">Tecnología ágil para comercios locales</p>
+        </div>
+    </footer>
+
+
+    <!-- JS Logic for WhatsApp Routing -->
+    <script>
+        // Configura aquí tu número de teléfono de WhatsApp (incluyendo código de país)
+        const MY_PHONE_NUMBER = "5215500000000"; // Reemplazar con tu número real de México (521 + 10 dígitos)
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navBtn = document.getElementById('nav-wa-btn');
+            const defaultMsg = encodeURIComponent("Hola Soluciones AlexTremo, me interesa solicitar información sobre sus menús digitales.");
+            navBtn.href = `https://wa.me/${MY_PHONE_NUMBER}?text=${defaultMsg}`;
+        });
+
+
+        // Handler for Package Orders
+        function orderPackage(packageName, price) {
+            const message = `Hola Soluciones AlexTremo, quiero contratar el paquete *${packageName}* ($${price} MXN). ¿Cuáles son los pasos para comenzar?`;
+            const waUrl = `https://wa.me/${MY_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+
+        // Handler for Update Form
+        function handleUpdateSubmit(e) {
+            e.preventDefault();
+            const establishment = document.getElementById('up-establishment').value;
+            const name = document.getElementById('up-name').value;
+            const type = document.getElementById('up-type').value;
+            const details = document.getElementById('up-details').value;
+
+
+            const message = `*SOLICITUD DE ACTUALIZACIÓN - ALEXTREMO*\n\n` +
+                            `*Negocio:* ${establishment}\n` +
+                            `*Contacto:* ${name}\n` +
+                            `*Modalidad:* ${type}\n` +
+                            `*Detalles:* ${details}`;
+
+
+            const waUrl = `https://wa.me/${MY_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
